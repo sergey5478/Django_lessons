@@ -19,13 +19,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-0&_tec!c2ru=aecgvrq&^&c1i^uc#0dm=iut31dxtf#8902z+2'
+SECRET_KEY = 'django-insecure-2jd8nb8ek(oqhdk^x%+b2w)#tu(g+5&a2qdj5jk=pm(884n%15'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
+    '192.168.0.96'
 ]
 
 # Application definition
@@ -37,10 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'seminar_1_app',
-    'seminar_2_app',
-    'seminar_3_app',
-    'shop_app',
+    'myapp', 'myapp2'
 ]
 
 MIDDLEWARE = [
@@ -53,7 +51,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'seminars.urls'
+ROOT_URLCONF = 'myproject.urls'
 
 TEMPLATES = [
     {
@@ -71,7 +69,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'seminars.wsgi.application'
+WSGI_APPLICATION = 'myproject.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
@@ -139,7 +137,7 @@ LOGGING = {
             'handlers': ['console', 'file'],
             'level': 'INFO',
         },
-        'seminar_2_app': {
+        'myapp': {
             'handlers': ['console'],
             'level': 'DEBUG',
             'propagate': True,
